@@ -235,7 +235,19 @@
 }
 
 .page-header {
-    background: url(../img/header-page.jpg) top center no-repeat;
+    background: url(../img/about-banner.jpg) top center no-repeat;
+    background-size: cover;
+    text-shadow: 0 0 30px rgba(0, 0, 0, .1);
+}
+
+.about-header {
+    background: url(../img/about-us-banner.jpg) top center no-repeat;
+    background-size: cover;
+    text-shadow: 0 0 30px rgba(0, 0, 0, .1);
+}
+
+.contact-header {
+    background: url(../img/contact-us.jpg) top center no-repeat;
     background-size: cover;
     text-shadow: 0 0 30px rgba(0, 0, 0, .1);
 }

@@ -10049,6 +10049,23 @@ h1,h2,h3,h4,h5,h6{
   
 
 }
+
+@media screen and (max-width: 767px) {
+  .p-5 {
+    padding: 1rem !important; /* Mobile */
+  }
+  .pad-mobile{
+    padding: 1rem !important;
+  }
+  .g-4, .gx-4 {
+
+    padding-left: 0.5rem;
+}
+
+}
+
+
+
 /* .space{
 
 } */

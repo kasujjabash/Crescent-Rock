@@ -487,7 +487,7 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+    <!-- <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script> -->
     <script src="https://files.bpcontent.cloud/2025/03/24/07/20250324072839-O26HFHBQ.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -502,6 +502,26 @@
 
     <!-- Template Javascript -->
     <script src="static/js/main.js"></script>
+
+    <!-- Bot -->
+     <script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '67f386b1213fc6fe22ca3d04' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+<!-- end of the bot script -->
+    
 </body>
 
 </html>

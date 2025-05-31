@@ -18,7 +18,7 @@ class User(db.Model):
     phone = db.Column(db.String(120), nullable=False)
     # license = db.Column(db.String(120), nullable=False)
     # country = db.Column(db.String(120), nullable=False)
-    # type = db.Column(db.String(120), nullable=False
+    # type = db.Column(db.String(120), nullable=False)
     
 @app.route('/api/add_user', methods=['POST'])
 def add_user():

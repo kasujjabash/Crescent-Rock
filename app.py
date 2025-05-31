@@ -17,18 +17,28 @@ class User(db.Model):
     name = db.Column(db.String(120), nullable=False)
     phone = db.Column(db.String(120), nullable=False)
     # license = db.Column(db.String(120), nullable=False)
+    # country = db.Column(db.String(120), nullable=False)
+    # type = db.Column(db.String(120), nullable=False)
     
 @app.route('/api/add_user', methods=['POST'])
 def add_user():
-    email = request.form.get('email')
-    name = request.form.get('name')
-    phone = request.form.get('phone')
-    # license = request.form.get('license')
-    age = request.form.get('age') 
+    email = request.form.get('doc_email')
+    name = request.form.get('doc_name')
+    phone = request.form.get('doc_phone')
+    # license = request.form.get('doc_license')
+    # country = request.form.get('service_country') 
+    # type = request.form.get('doc_type')
     
-    db.session.add(User(name=name, age=int(age)))
+    db.session.add(User(
+        email=email,
+        name=name,
+        phone=phone,
+        # license=license,
+        # country=country,
+        # type=type
+    ))
     db.session.commit()
-    return jsonify({'message': f"name :{name} and age: {age} received"})
+    return jsonify({'message': f"name: {name} and email: {email} received"})
 
 
 @app.route('/')

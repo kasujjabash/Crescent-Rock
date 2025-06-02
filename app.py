@@ -20,6 +20,9 @@ class User(db.Model):
     # country = db.Column(db.String(120), nullable=False)
     # type = db.Column(db.String(120), nullable=False)
     
+with app.app_context():
+    db.create_all()
+    
 @app.route('/api/add_user', methods=['POST'])
 def add_user():
     email = request.form.get('email')
@@ -37,6 +40,7 @@ def add_user():
         # country=country,
         # type=type
     ))
+    
     db.session.commit()
     return jsonify({'message': f"name: {name} and email: {email} received"})
 

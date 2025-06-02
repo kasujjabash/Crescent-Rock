@@ -22,9 +22,9 @@ class User(db.Model):
     
 @app.route('/api/add_user', methods=['POST'])
 def add_user():
-    email = request.form.get('doc_email')
-    name = request.form.get('doc_name')
-    phone = request.form.get('doc_phone')
+    email = request.form.get('email')
+    name = request.form.get('name')
+    phone = request.form.get('phone')
     # license = request.form.get('doc_license')
     # country = request.form.get('service_country') 
     # type = request.form.get('doc_type')
